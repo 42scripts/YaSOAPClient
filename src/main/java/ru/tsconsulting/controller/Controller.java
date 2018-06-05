@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Controller {
     @RequestMapping("/hello")
     public String showHello(){
-        return "Hello";
+        return "test";
     }
 }

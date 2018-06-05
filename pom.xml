@@ -8,15 +8,17 @@
     <artifactId>YaSoapClient</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.java.version>1.8</project.java.version>
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.2.RELEASE</version>
     </parent>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -63,7 +65,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <!-- WSDL to classes-->
-            <!--<plugin>
+            <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
                 <version>0.13.2</version>
@@ -75,16 +77,16 @@
                     </execution>
                 </executions>
                 <configuration>
-                     <generatePackage>ru.tsconsulting.soap.model</generatePackage>
-                    &lt;!&ndash;<generatePackage>ru.tsconsulting.soap.testModel</generatePackage>&ndash;&gt;
+                     <generatePackage>ru.tsconsulting.soap.model.ya</generatePackage>
+                    <!--<generatePackage>ru.tsconsulting.soap.testModel</generatePackage>-->
                     <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
                     <schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>
-                    &lt;!&ndash;<schemaDirectory>${project.basedir}/src/main/resources/testWsdl</schemaDirectory>&ndash;&gt;
+                    <!--<schemaDirectory>${project.basedir}/src/main/resources/testWsdl</schemaDirectory>-->
                     <schemaIncludes>
                         <include>*.wsdl</include>
                     </schemaIncludes>
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 </project>
