@@ -16,7 +16,7 @@ public class Config {
     @Bean
     public SOAPConnector soapConnector(Jaxb2Marshaller marshaller) {
         SOAPConnector client = new SOAPConnector();
-        client.setDefaultUri("https://speller.yandex.net/services/spellservice");
+        client.setDefaultUri("http://speller.yandex.net/services/spellservice/checkText");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;
